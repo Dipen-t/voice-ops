@@ -1,0 +1,20 @@
+{
+  "kind": "live-sarvam-groq-gateway-synthetic-speech",
+  "microphone_tested": false,
+  "free_signup_credits_only": true,
+  "tts_model": "bulbul:v4-flash",
+  "stt_model": "saaras:v4",
+  "pcm_bytes": 96800,
+  "audio_seconds": 3.025,
+  "tts_first_audio_ms": 329,
+  "partial_events": 30,
+  "transcripts": [
+    "What should we check to investigate slow request?"
+  ],
+  "tool_calls": 2,
+  "answer_validated": true,
+  "gateway_audio_bytes": 24200,
+  "progress_audio_bytes": 85800,
+  "speech_end_to_progress_audio_at_server_ms": 365,
+  "speech_end_to_first_audio_at_server_ms": 3537
+}

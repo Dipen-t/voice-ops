@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-09T21:22:50.124Z",
+  "synthetic": false,
+  "scope": "One live Groq + isolated container API + real stdio MCP + local RAG turn; no accuracy or latency percentile claim",
+  "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81",
+  "phases": [
+    {
+      "type": "turn_started",
+      "elapsed_ms": 1
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 647
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 849,
+      "tool": "get_incident_summary",
+      "arguments": {
+        "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81"
+      },
+      "evidence_id": "E1"
+    },
+    {
+      "type": "retrieval_started",
+      "elapsed_ms": 849
+    },
+    {
+      "type": "retrieval_completed",
+      "elapsed_ms": 3852,
+      "status": "retrieval_candidates"
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 3853
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 4691,
+      "usage": {
+        "prompt_tokens": 3786,
+        "completion_tokens": 63,
+        "total_tokens": 3849
+      }
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 4692
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 4784,
+      "tool": "search_service_logs",
+      "arguments": {
+        "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81",
+        "limit": 5,
+        "query": "error",
+        "service": "frontend"
+      },
+      "evidence_id": "E2"
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 4784
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 5506,
+      "usage": {
+        "prompt_tokens": 3146,
+        "completion_tokens": 108,
+        "total_tokens": 3254
+      }
+    },
+    {
+      "type": "answer",
+      "elapsed_ms": 5509
+    }
+  ],
+  "answer": {
+    "observed_evidence": [],
+    "likely_explanations": [],
+    "confidence": "low",
+    "uncertainty": [
+      "No log records were retrieved for the requested time window; evidence is empty."
+    ],
+    "suggested_checks": [
+      "Verify that the requested time window and service match available log data; request a different window or confirm that logs were ingested."
+    ],
+    "documentation_ids": [
+      "D1",
+      "D2"
+    ],
+    "clarification": null
+  },
+  "citations": [
+    {
+      "id": "D1",
+      "text": "Since span events also contain attributes, the question of when to use events instead of attributes might not always have an obvious answer. To inform your decision, consider whether a specific timestamp is meaningful. For example, when you're tracking an operation with a span and the operation completes, you might want to add data from the operation to your telemetry. - If the timestamp in which the operation completes is meaningful or relevant, attach the data to a span event. - If the timestamp isn't meaningful, attach the data as span attributes.",
+      "citation": {
+        "chunk_id": "0aa4f4821f161b47033acf6f94f39edde452ce6455a8e894194e0fb2171573d8",
+        "document_id": "f94e6a8959c528040f1f9b2c2423b2a3bd80625f08fdef3a0d22eb6ff99904f6",
+        "title": "Traces",
+        "heading": "Spans > Span Events > When to use span events versus span attributes",
+        "url": "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+        "revision": "c6df13913b1b0133aa46fdf9183c3a3f9ba64092",
+        "source_start_line": 280,
+        "source_end_line": 289,
+        "license": "CC-BY-4.0",
+        "attribution": "OpenTelemetry Authors",
+        "modifications": "Selected sections; code examples/front matter/diagrams omitted, Markdown formatting removed; 100-word chunks with 20-word overlap.",
+        "excerpt_truncated": false
+      }
+    },
+    {
+      "id": "D2",
+      "text": "A Span Event can be thought of as a structured log message (or annotation) on a Span, typically used to denote a meaningful, singular point in time during the Span's duration. For example, consider two scenarios in a web browser: 1. Tracking a page load 2. Denoting when a page becomes interactive A Span is best used to track the first scenario because it's an operation with a start and an end. A Span Event is best used to track the second scenario because it represents a meaningful, singular point in time.",
+      "citation": {
+        "chunk_id": "fafb77daa4340852ce31fa1a8cc091d034a7f150e68df21b22256d79004c0930",
+        "document_id": "f94e6a8959c528040f1f9b2c2423b2a3bd80625f08fdef3a0d22eb6ff99904f6",
+        "title": "Traces",
+        "heading": "Spans > Span Events",
+        "url": "https://opentelemetry.io/docs/concepts/signals/traces/#span-events",
+        "revision": "c6df13913b1b0133aa46fdf9183c3a3f9ba64092",
+        "source_start_line": 263,
+        "source_end_line": 276,
+        "license": "CC-BY-4.0",
+        "attribution": "OpenTelemetry Authors",
+        "modifications": "Selected sections; code examples/front matter/diagrams omitted, Markdown formatting removed; 100-word chunks with 20-word overlap.",
+        "excerpt_truncated": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "synthetic-local-response-time-check",
+  "sample_count": 3,
+  "samples_per_scenario": 1,
+  "llm_model": "openai/gpt-oss-120b",
+  "microphone_tested": false,
+  "audible_browser_playback_tested": false,
+  "free_provider_credits_only": true,
+  "notes": [
+    "Measurements use generated Hindi PCM and a local WebSocket client, not a browser microphone.",
+    "One sample per scenario; not averages or percentile benchmarks.",
+    "First RAG query after restart includes embedding-worker cold start.",
+    "Audio arrival does not include browser decoding, scheduling or speaker delay."
+  ],
+  "measurements": [
+    {
+      "scenario": "Acknowledgement",
+      "source_report": "eval/reports/hinglish-acknowledgement-voice-smoke.json",
+      "api_request_to_answer_ms": 13,
+      "last_input_pcm_to_first_audio_at_client_ms": 2010,
+      "vad_end_to_first_audio_at_server_ms": 690,
+      "input_end_to_request_start_ms": 1732,
+      "answer_ready_to_first_audio_at_client_ms": 265,
+      "retrieval_ms": null,
+      "model_generation_and_validation_ms": null,
+      "reply_audio_seconds": 2.0625,
+      "complete_audio_received": true
+    },
+    {
+      "scenario": "Simple waiting-period question",
+      "source_report": "eval/reports/hindi-document-voice-smoke.json",
+      "api_request_to_answer_ms": 1410,
+      "last_input_pcm_to_first_audio_at_client_ms": 3192,
+      "vad_end_to_first_audio_at_server_ms": 1877,
+      "input_end_to_request_start_ms": 1558,
+      "answer_ready_to_first_audio_at_client_ms": 224,
+      "retrieval_ms": 626,
+      "model_generation_and_validation_ms": 775,
+      "reply_audio_seconds": 9.00625,
+      "complete_audio_received": true
+    },
+    {
+      "scenario": "Detailed cost-sharing question",
+      "source_report": "eval/reports/hinglish-insurance-detailed-voice-smoke.json",
+      "api_request_to_answer_ms": 1322,
+      "last_input_pcm_to_first_audio_at_client_ms": 3140,
+      "vad_end_to_first_audio_at_server_ms": 1866,
+      "input_end_to_request_start_ms": 1470,
+      "answer_ready_to_first_audio_at_client_ms": 348,
+      "retrieval_ms": 15,
+      "model_generation_and_validation_ms": 1296,
+      "reply_audio_seconds": 48.88125,
+      "complete_audio_received": true
+    }
+  ]
+}

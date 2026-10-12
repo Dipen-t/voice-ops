@@ -1,0 +1,99 @@
+name: voiceops
+services:
+  investigator:
+    profiles: [investigator]
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    env_file: [.env.model]
+    environment:
+      DATABASE_URL: ${RUNTIME_CONTAINER_DATABASE_URL:-postgresql://unconfigured@postgres/voiceops}
+      REDIS_URL: redis://redis:6379
+      HOST: 0.0.0.0
+      PORT: 3002
+      INVESTIGATOR_ENABLED: 'true'
+    ports: ['127.0.0.1:3002:3002']
+    volumes: ['./data/models:/app/data/models:ro']
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp]
+  mcp:
+    profiles: [tools]
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    command: [node, dist/apps/mcp-server/src/main.js]
+    environment:
+      DATABASE_URL: ${RUNTIME_CONTAINER_DATABASE_URL:-postgresql://unconfigured@postgres/voiceops}
+      VOICEOPS_INCIDENT_ID: ${VOICEOPS_INCIDENT_ID:-}
+    stdin_open: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp]
+  api:
+    profiles: [runtime]
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: ${RUNTIME_CONTAINER_DATABASE_URL:-postgresql://unconfigured@postgres/voiceops}
+      REDIS_URL: redis://redis:6379
+      HOST: 0.0.0.0
+      PORT: 3001
+      HEALTH_TIMEOUT_MS: 1500
+      LOG_LEVEL: info
+    ports:
+      - "127.0.0.1:3001:3001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp]
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3001/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+  postgres:
+    image: pgvector/pgvector:0.8.1-pg17@sha256:3e8b3adfd27b5707128f60956f62a793c3c9326ea8cfaf0eab7adccb5d700b21
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-15432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  redis:
+    image: redis:7.4.2-alpine@sha256:02419de7eddf55aa5bcf49efb74e88fa8d931b4d77c07eff8a6b2144472b6952
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-16379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+volumes:
+  postgres_data:
+  redis_data:

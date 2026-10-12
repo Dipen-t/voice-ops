@@ -1,0 +1,79 @@
+{
+  "kind": "live-hindi-document-assistant-synthetic-voice",
+  "microphone_tested": false,
+  "free_signup_credits_only": true,
+  "tts_model": "bulbul:v4-flash",
+  "stt_model": "saaras:v4",
+  "pcm_bytes": 77000,
+  "audio_seconds": 2.40625,
+  "tts_first_audio_ms": 318,
+  "partial_events": 27,
+  "transcripts": [
+    "सैंपल पॉलिसी में वेटिंग पीरियड कितना है?"
+  ],
+  "tool_calls": 0,
+  "answer_validated": true,
+  "gateway_audio_bytes": 288200,
+  "progress_audio_bytes": 0,
+  "speech_end_to_first_audio_at_server_ms": 2170,
+  "llm_model": "openai/gpt-oss-120b",
+  "request_to_answer_ms": 1556,
+  "last_input_pcm_to_first_audio_at_client_ms": 2669,
+  "request_to_first_audio_at_client_ms": 1942,
+  "answer_audio_seconds": 9.00625,
+  "turn_events": [
+    {
+      "type": "search_started",
+      "elapsed_ms": 0
+    },
+    {
+      "type": "query_resolved",
+      "elapsed_ms": 0,
+      "path": "local"
+    },
+    {
+      "type": "retrieval_completed",
+      "elapsed_ms": 765
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 765
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 1540
+    },
+    {
+      "type": "answer",
+      "elapsed_ms": 1542
+    }
+  ],
+  "complete_answer_audio_received": true,
+  "document_answer": {
+    "reply": "Sample policy mein illness-related claims ke liye waiting period 30 days hai, jabki accident-related claims ke liye koi initial waiting period nahi hai.",
+    "kind": "document",
+    "citations": [
+      {
+        "id": "D1",
+        "quote": "waiting period of 30 days for illness-related claims after the cover start date. Accident-related claims have no initial waiting period",
+        "source": {
+          "chunk_id": "e716a52d9514135460adf54814bcee77022c1deec80028d0f5631021e2c21cb4",
+          "document_id": "dce3a82e-635b-4f19-89b3-a68b5db3e2a7",
+          "title": "Sample Insurance FAQ · Fictional demo",
+          "heading": "Sample Insurance FAQ — FICTIONAL DEMO ONLY > Waiting period",
+          "url": "/sample-insurance-faq.md#waiting-period",
+          "revision": "demo-v2",
+          "source_start_line": 10,
+          "source_end_line": 10,
+          "license": "CC0-1.0",
+          "attribution": "Authored for local software testing; no real insurer or policy.",
+          "modifications": "Expanded fictional demo sections chunked; English embeddings. Hindi/Hinglish questions translated for search."
+        }
+      }
+    ]
+  },
+  "speaker": "aparna_hi_customer",
+  "language": "hi-IN",
+  "measured_at": "2026-10-10T04:44:44.838Z",
+  "configured_silence_duration_ms": 300
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "live-sarvam-synthetic-speech-loopback",
+  "microphone_tested": false,
+  "free_signup_credits_only": true,
+  "tts_model": "bulbul:v4-flash",
+  "stt_model": "saaras:v4",
+  "pcm_bytes": 96800,
+  "audio_seconds": 3.025,
+  "tts_first_audio_ms": 397,
+  "partial_events": 30,
+  "transcripts": [
+    "What should we check to investigate slow request?"
+  ]
+}

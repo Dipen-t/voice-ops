@@ -1,0 +1,94 @@
+{
+  "kind": "live-hinglish-insurance-detailed-synthetic-voice",
+  "microphone_tested": false,
+  "free_signup_credits_only": true,
+  "tts_model": "bulbul:v4-flash",
+  "stt_model": "saaras:v4",
+  "pcm_bytes": 162800,
+  "audio_seconds": 5.0875,
+  "tts_first_audio_ms": 272,
+  "partial_events": 74,
+  "transcripts": [
+    "डिडक्टेबल और को-पेमेंट में क्या फर्क है? एक उदाहरण के साथ विस्तार से समझाओ।"
+  ],
+  "tool_calls": 0,
+  "answer_validated": true,
+  "gateway_audio_bytes": 1564200,
+  "progress_audio_bytes": 0,
+  "speech_end_to_first_audio_at_server_ms": 1866,
+  "llm_model": "openai/gpt-oss-120b",
+  "request_to_answer_ms": 1322,
+  "last_input_pcm_to_first_audio_at_client_ms": 3140,
+  "request_to_first_audio_at_client_ms": 1670,
+  "answer_audio_seconds": 48.88125,
+  "turn_events": [
+    {
+      "type": "search_started",
+      "elapsed_ms": 0
+    },
+    {
+      "type": "query_resolved",
+      "elapsed_ms": 0,
+      "path": "local"
+    },
+    {
+      "type": "retrieval_completed",
+      "elapsed_ms": 15
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 15
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 1311
+    },
+    {
+      "type": "answer",
+      "elapsed_ms": 1311
+    }
+  ],
+  "complete_answer_audio_received": true,
+  "document_answer": {
+    "reply": "Deductible aur co-payment do alag cost‑sharing mechanisms hain. Deductible wo fixed amount hai jo aapko pehle khud bharna padta hai jab claim eligible hota hai; uske baad policy baaki amount ko cover karti hai. Co‑payment ek percentage ya fixed share hota hai jo aap claim ka hissa ke roop mein denge, baaki policy ke terms ke hisaab se insurer pay karta hai. Example ke liye: ek eligible bill Rs.12000 par deductible Rs.5000 hai, to aap Rs.5000 khud dekhte hain aur Rs.7000 policy review ke liye bachta hai. Agar usi bill par 20% co‑payment apply hota hai, to member Rs.2400 (20% of 12000) pay karta hai aur Rs.9600 insurer ke liye bachta hai. Ye alag‑alag scenarios hain, dono ek saath nahi chalti.",
+    "kind": "document",
+    "citations": [
+      {
+        "id": "D2",
+        "quote": "a deductible is an expense amount borne before the policy pays under its terms; a co-payment is the member's stated share of an eligible expense",
+        "source": {
+          "chunk_id": "f2504e0feb998d568dfcd182795ed5ca46a7014fa4d38372ba9acfbadec1bd82",
+          "document_id": "dce3a82e-635b-4f19-89b3-a68b5db3e2a7",
+          "title": "Sample Insurance FAQ · Fictional demo",
+          "heading": "Sample Insurance FAQ — FICTIONAL DEMO ONLY > Deductible versus co-payment",
+          "url": "/sample-insurance-faq.md#deductible-versus-co-payment",
+          "revision": "demo-v2",
+          "source_start_line": 35,
+          "source_end_line": 35,
+          "license": "CC0-1.0",
+          "attribution": "Authored for local software testing; no real insurer or policy.",
+          "modifications": "Expanded fictional demo sections chunked; English embeddings. Hindi/Hinglish questions translated for search."
+        }
+      },
+      {
+        "id": "D1",
+        "quote": "deductible Rs.5000 on eligible bill Rs.12000 leaves Rs.7000 for policy review; co-payment 20% on that bill leaves Rs.2400 for the member and Rs.9600 for policy review",
+        "source": {
+          "chunk_id": "459cd3a900320f8af7fdd7e840486eccf47124bbe985edafe018231bff5a6ad0",
+          "document_id": "dce3a82e-635b-4f19-89b3-a68b5db3e2a7",
+          "title": "Sample Insurance FAQ · Fictional demo",
+          "heading": "Sample Insurance FAQ — FICTIONAL DEMO ONLY > Worked cost-sharing example",
+          "url": "/sample-insurance-faq.md#worked-cost-sharing-example",
+          "revision": "demo-v2",
+          "source_start_line": 38,
+          "source_end_line": 38,
+          "license": "CC0-1.0",
+          "attribution": "Authored for local software testing; no real insurer or policy.",
+          "modifications": "Expanded fictional demo sections chunked; English embeddings. Hindi/Hinglish questions translated for search."
+        }
+      }
+    ]
+  },
+  "speaker": "aparna_hi_customer",
+  "language": "hi-IN"
+}

@@ -1,0 +1,109 @@
+{
+  "capturedAt": "2026-10-09T19:58:01.941Z",
+  "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "totalSourceBytes": 23533610,
+  "batchesCommittedThisRun": 0,
+  "rowsInsertedThisRun": 0,
+  "maximumResidentSetKiB": 196008,
+  "cases": [
+    {
+      "incidentId": "7866929a-f7c0-489c-9971-c20405e60e81",
+      "title": "Recorded incident 1",
+      "telemetry": [
+        {
+          "kind": "metrics",
+          "sourceRows": 930,
+          "normalizedRows": 68820,
+          "nullValues": 1974,
+          "minTimeUs": "1708474641000000",
+          "maxTimeUs": "1708475570000000",
+          "bytes": 127755
+        },
+        {
+          "kind": "logs",
+          "sourceRows": 110067,
+          "normalizedRows": 110067,
+          "nullValues": 0,
+          "minTimeUs": "1708474641000000",
+          "maxTimeUs": "1708475533000000",
+          "bytes": 191241
+        },
+        {
+          "kind": "traces",
+          "sourceRows": 199960,
+          "normalizedRows": 199960,
+          "nullValues": 9381,
+          "minTimeUs": "1708474641000683",
+          "maxTimeUs": "1708475399561999",
+          "bytes": 5426555
+        }
+      ]
+    },
+    {
+      "incidentId": "0952ccc9-0fe3-40f0-9ef2-23a6f8bc437c",
+      "title": "Recorded incident 2",
+      "telemetry": [
+        {
+          "kind": "metrics",
+          "sourceRows": 1441,
+          "normalizedRows": 102311,
+          "nullValues": 6,
+          "minTimeUs": "1705493188000000",
+          "maxTimeUs": "1705494628000000",
+          "bytes": 159459
+        },
+        {
+          "kind": "logs",
+          "sourceRows": 155910,
+          "normalizedRows": 155910,
+          "nullValues": 0,
+          "minTimeUs": "1705493188000000",
+          "maxTimeUs": "1705494628000000",
+          "bytes": 293495
+        },
+        {
+          "kind": "traces",
+          "sourceRows": 276103,
+          "normalizedRows": 276103,
+          "nullValues": 12868,
+          "minTimeUs": "1705493188003397",
+          "maxTimeUs": "1705494627995941",
+          "bytes": 7295482
+        }
+      ]
+    },
+    {
+      "incidentId": "88ec4733-902a-409d-8a87-5f1d744ac20e",
+      "title": "Recorded incident 3",
+      "telemetry": [
+        {
+          "kind": "metrics",
+          "sourceRows": 1441,
+          "normalizedRows": 109516,
+          "nullValues": 10,
+          "minTimeUs": "1705705884000000",
+          "maxTimeUs": "1705707324000000",
+          "bytes": 159581
+        },
+        {
+          "kind": "logs",
+          "sourceRows": 113758,
+          "normalizedRows": 113758,
+          "nullValues": 0,
+          "minTimeUs": "1705705884000000",
+          "maxTimeUs": "1705707324000000",
+          "bytes": 263430
+        },
+        {
+          "kind": "traces",
+          "sourceRows": 379232,
+          "normalizedRows": 379232,
+          "nullValues": 17924,
+          "minTimeUs": "1705705884062003",
+          "maxTimeUs": "1705707324000795",
+          "bytes": 9616612
+        }
+      ]
+    }
+  ]
+}

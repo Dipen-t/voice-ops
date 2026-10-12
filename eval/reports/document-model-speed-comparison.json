@@ -1,0 +1,108 @@
+{
+  "measured_at": "2026-10-10T04:51:51.991Z",
+  "synthetic": true,
+  "scope": "Six model-only requests over selected fictional FAQ passages; no retrieval, STT, TTS or microphone timing. One sample per model/question. Structural validation is not semantic accuracy proof.",
+  "free_plan_only": true,
+  "automatic_retries": 0,
+  "results": [
+    {
+      "model": "openai/gpt-oss-120b",
+      "case": "waiting-period",
+      "elapsed_ms": 1030,
+      "validated": true,
+      "style_ok": true,
+      "expectation_ok": true,
+      "reply": {
+        "reply": "Is sample policy mein illness-related claims ke liye waiting period 30 din hai, cover start date ke baad. Accident-related claims ke liye koi initial waiting period nahi hai. Baaki waiting periods, jaise pre-existing conditions, yahan specify nahi kiye gaye hain.",
+        "covered": true,
+        "citations": [
+          {
+            "id": "D1",
+            "quote": "The fictional sample health policy has a waiting period of 30 days for illness-related claims after the cover start date. Accident-related claims have no initial waiting period in this sample."
+          }
+        ]
+      }
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "case": "waiting-period",
+      "elapsed_ms": 511,
+      "validated": true,
+      "style_ok": true,
+      "expectation_ok": true,
+      "reply": {
+        "reply": "Sample policy mein illness related claims ke liye 30 din ka waiting period hai jo cover start date ke baad count hota hai. Accident related claims ka koi initial waiting period nahi hai.",
+        "covered": true,
+        "citations": [
+          {
+            "id": "D1",
+            "quote": "The fictional sample health policy has a waiting period of 30 days for illness-related claims after the cover start date. Accident-related claims have no initial waiting period in this sample."
+          }
+        ]
+      }
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "case": "cost-sharing",
+      "elapsed_ms": 1365,
+      "validated": true,
+      "style_ok": true,
+      "expectation_ok": true,
+      "reply": {
+        "reply": "Deductible wo amount hai jo aapko pehle khud bear karna padta hai before policy koi claim pay karti hai; ye premium se alag hota hai. Co‑payment ka matlab hai ki claim accept hone ke baad bhi aapko eligible expense ka ek nishchit hissa (percentage ya fixed) khud dena padta hai, baki policy cover karti hai. Example ke liye, fictional numbers lete hain: Rs.5000 deductible on a Rs.12,000 bill leaves Rs.7,000 for policy review, jabki 20% co‑payment on the same bill means aap Rs.2,400 pay karte hain aur policy Rs.9,600 cover karti hai. In dono mechanisms ka effect alag hota hai – deductible pehle aata hai, co‑payment claim ke baad.",
+        "covered": true,
+        "citations": [
+          {
+            "id": "D1",
+            "quote": "a deductible is an eligible expense amount the member must bear before the policy pays according to its terms"
+          },
+          {
+            "id": "D2",
+            "quote": "co-payment means the member bears a stated share of an eligible claim expense"
+          },
+          {
+            "id": "D3",
+            "quote": "a deductible is an expense amount borne before the policy pays under its terms; a co-payment is the member's stated share of an eligible expense"
+          },
+          {
+            "id": "D4",
+            "quote": "deductible Rs.5000 on eligible bill Rs.12000 leaves Rs.7000 for policy review; co-payment 20% on that bill leaves Rs.2400 for the member and Rs.9600 for policy review"
+          }
+        ]
+      }
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "case": "cost-sharing",
+      "elapsed_ms": 854,
+      "validated": false,
+      "error": "DOCUMENT_MODEL_FAILED"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "case": "unknown-premium",
+      "elapsed_ms": 621,
+      "validated": true,
+      "style_ok": true,
+      "expectation_ok": true,
+      "reply": {
+        "reply": "Is detail ko main abhi confirm nahi kar sakti, aur guess karke aapko galat jaankari nahi dena chahti. Actual policy ke liye insurer se confirm karein. Chahein toh premium, waiting period ya claim process samjha sakti hoon.",
+        "covered": false,
+        "citations": []
+      }
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "case": "unknown-premium",
+      "elapsed_ms": 515,
+      "validated": true,
+      "style_ok": true,
+      "expectation_ok": true,
+      "reply": {
+        "reply": "Is detail ko main abhi confirm nahi kar sakti, aur guess karke aapko galat jaankari nahi dena chahti. Actual policy ke liye insurer se confirm karein. Chahein toh premium, waiting period ya claim process samjha sakti hoon.",
+        "covered": false,
+        "citations": []
+      }
+    }
+  ]
+}

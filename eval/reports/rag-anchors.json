@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-10-09T20:39:44.143Z",
+  "sources": [
+    {
+      "url": "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/",
+      "anchors_checked": 3,
+      "missing": []
+    },
+    {
+      "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+      "anchors_checked": 4,
+      "missing": []
+    },
+    {
+      "url": "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/",
+      "anchors_checked": 8,
+      "missing": []
+    },
+    {
+      "url": "https://opentelemetry.io/docs/concepts/signals/traces/",
+      "anchors_checked": 14,
+      "missing": []
+    }
+  ]
+}

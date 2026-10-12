@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+!.env.admin.example
+!.env.model.example
+data/raw/
+data/private-evaluation/
+data/models/
+*.log
+.DS_Store

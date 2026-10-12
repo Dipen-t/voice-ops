@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-09T21:28:14.217Z",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81",
+  "synthetic": false,
+  "scope": "One live recorded-incident smoke test; no diagnosis accuracy claim",
+  "phases": [
+    {
+      "type": "turn_started",
+      "elapsed_ms": 2
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 1162
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 1417,
+      "tool": "get_incident_summary",
+      "evidence_id": "E1"
+    },
+    {
+      "type": "retrieval_started",
+      "elapsed_ms": 1418
+    },
+    {
+      "type": "retrieval_completed",
+      "elapsed_ms": 6280,
+      "status": "retrieval_candidates",
+      "citation_count": 2
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 6281
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 8304,
+      "usage": {
+        "prompt_tokens": 3789,
+        "completion_tokens": 60,
+        "total_tokens": 3849
+      }
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 8318
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 8824,
+      "tool": "search_service_logs",
+      "evidence_id": "E2"
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 8826
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 9807,
+      "usage": {
+        "prompt_tokens": 3444,
+        "completion_tokens": 323,
+        "total_tokens": 3767
+      }
+    },
+    {
+      "type": "answer",
+      "elapsed_ms": 9830
+    }
+  ],
+  "answer": {
+    "observed_evidence": [
+      {
+        "evidence_id": "E2",
+        "observation": "GetCartAsync called with userId=8a217b1d-507e-4916-83b0-4e8c4c55c098",
+        "quote": "GetCartAsync called with userId=8a217b1d-507e-4916-83b0-4e8c4c55c098"
+      }
+    ],
+    "likely_explanations": [
+      {
+        "hypothesis": "Span events are useful when a specific timestamp is meaningful, e.g., marking a point in time such as the completion of an operation.",
+        "evidence_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "confidence": "medium",
+    "uncertainty": [
+      "Limited evidence on when span events are preferred; guidance inferred from general practice."
+    ],
+    "suggested_checks": [
+      "Verify if any operation has a distinct completion timestamp to determine if a span event is appropriate."
+    ],
+    "documentation_ids": [
+      "D1"
+    ],
+    "clarification": null
+  }
+}

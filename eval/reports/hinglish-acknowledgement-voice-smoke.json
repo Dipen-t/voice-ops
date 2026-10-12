@@ -1,0 +1,38 @@
+{
+  "kind": "live-hinglish-acknowledgement-synthetic-voice",
+  "microphone_tested": false,
+  "free_signup_credits_only": true,
+  "tts_model": "bulbul:v4-flash",
+  "stt_model": "saaras:v4",
+  "pcm_bytes": 50600,
+  "audio_seconds": 1.58125,
+  "tts_first_audio_ms": 336,
+  "partial_events": 18,
+  "transcripts": [
+    "अच्छा ठीक है, ठीक है, समझ गया।"
+  ],
+  "tool_calls": 0,
+  "answer_validated": true,
+  "gateway_audio_bytes": 66000,
+  "progress_audio_bytes": 0,
+  "speech_end_to_first_audio_at_server_ms": 690,
+  "llm_model": "openai/gpt-oss-120b",
+  "request_to_answer_ms": 13,
+  "last_input_pcm_to_first_audio_at_client_ms": 2010,
+  "request_to_first_audio_at_client_ms": 278,
+  "answer_audio_seconds": 2.0625,
+  "turn_events": [
+    {
+      "type": "answer",
+      "elapsed_ms": 0
+    }
+  ],
+  "complete_answer_audio_received": true,
+  "document_answer": {
+    "reply": "Badhiya! Aur koi sawaal ho toh poochhiye.",
+    "kind": "greeting",
+    "citations": []
+  },
+  "speaker": "aparna_hi_customer",
+  "language": "hi-IN"
+}

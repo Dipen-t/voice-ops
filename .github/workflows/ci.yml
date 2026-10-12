@@ -1,0 +1,26 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    env:
+      # Local embeddings use bundled CPU binaries, never optional CUDA downloads.
+      ONNXRUNTIME_NODE_INSTALL: skip
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: cp .env.admin.example .env.admin
+      - run: npm run infra:up
+      - run: npm run db:migrate
+      - run: npm run db:setup
+      - run: npm run test:integration
+      - if: always()
+        run: docker compose --env-file .env.admin --profile runtime stop

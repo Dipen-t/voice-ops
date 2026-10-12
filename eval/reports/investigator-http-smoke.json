@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-09T21:30:37.393Z",
+  "synthetic": false,
+  "scope": "One live Groq + isolated container API + real stdio MCP + local RAG turn; no accuracy or latency percentile claim",
+  "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81",
+  "phases": [
+    {
+      "type": "turn_started",
+      "elapsed_ms": 1
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 665
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 839,
+      "tool": "get_incident_summary",
+      "arguments": {
+        "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81"
+      },
+      "evidence_id": "E1"
+    },
+    {
+      "type": "retrieval_started",
+      "elapsed_ms": 840
+    },
+    {
+      "type": "retrieval_completed",
+      "elapsed_ms": 2863,
+      "status": "retrieval_candidates"
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 2863
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 3765,
+      "usage": {
+        "prompt_tokens": 3789,
+        "completion_tokens": 60,
+        "total_tokens": 3849
+      }
+    },
+    {
+      "type": "tool_started",
+      "elapsed_ms": 3766
+    },
+    {
+      "type": "tool_completed",
+      "elapsed_ms": 3798,
+      "tool": "search_service_logs",
+      "arguments": {
+        "incident_id": "7866929a-f7c0-489c-9971-c20405e60e81",
+        "limit": 2
+      },
+      "evidence_id": "E2"
+    },
+    {
+      "type": "model_started",
+      "elapsed_ms": 3798
+    },
+    {
+      "type": "model_completed",
+      "elapsed_ms": 4957,
+      "usage": {
+        "prompt_tokens": 3446,
+        "completion_tokens": 413,
+        "total_tokens": 3859
+      }
+    },
+    {
+      "type": "answer",
+      "elapsed_ms": 4964
+    }
+  ],
+  "answer": {
+    "observed_evidence": [
+      {
+        "evidence_id": "E1",
+        "observation": "Incident 7866929a-f7c0-489c-9971-c20405e60e81 was recorded.",
+        "quote": "7866929a-f7c0-489c-9971-c20405e60e81"
+      },
+      {
+        "evidence_id": "E2",
+        "observation": "Log from cartservice: GetCartAsync called with userId=8a217b1d-507e-4916-83b0-4e8c4c55c098.",
+        "quote": "GetCartAsync called with userId=8a217b1d-507e-4916-83b0-4e8c4c55c098"
+      }
+    ],
+    "likely_explanations": [
+      {
+        "hypothesis": "A span event should be used when a specific point in time is meaningful or relevant to the operation, whereas attributes are better for static context data.",
+        "evidence_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "confidence": "medium",
+    "uncertainty": [
+      "Insufficient information about the broader telemetry context to determine definitive usage guidelines.",
+      "Uncertainty remains regarding whether the timestamp of the GetCartAsync call is the sole criteria for choosing events over attributes."
+    ],
+    "suggested_checks": [
+      "Verify if the timestamp of the GetCartAsync call is a significant event in the operation timeline.",
+      "Review span attributes for static data that could be extracted to avoid unnecessary events."
+    ],
+    "documentation_ids": [
+      "D1",
+      "D2"
+    ],
+    "clarification": null
+  },
+  "citations": [
+    {
+      "id": "D1",
+      "text": "Since span events also contain attributes, the question of when to use events instead of attributes might not always have an obvious answer. To inform your decision, consider whether a specific timestamp is meaningful. For example, when you're tracking an operation with a span and the operation completes, you might want to add data from the operation to your telemetry. - If the timestamp in which the operation completes is meaningful or relevant, attach the data to a span event. - If the timestamp isn't meaningful, attach the data as span attributes.",
+      "citation": {
+        "chunk_id": "0aa4f4821f161b47033acf6f94f39edde452ce6455a8e894194e0fb2171573d8",
+        "document_id": "f94e6a8959c528040f1f9b2c2423b2a3bd80625f08fdef3a0d22eb6ff99904f6",
+        "title": "Traces",
+        "heading": "Spans > Span Events > When to use span events versus span attributes",
+        "url": "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+        "revision": "c6df13913b1b0133aa46fdf9183c3a3f9ba64092",
+        "source_start_line": 280,
+        "source_end_line": 289,
+        "license": "CC-BY-4.0",
+        "attribution": "OpenTelemetry Authors",
+        "modifications": "Selected sections; code examples/front matter/diagrams omitted, Markdown formatting removed; 100-word chunks with 20-word overlap.",
+        "excerpt_truncated": false
+      }
+    },
+    {
+      "id": "D2",
+      "text": "A Span Event can be thought of as a structured log message (or annotation) on a Span, typically used to denote a meaningful, singular point in time during the Span's duration. For example, consider two scenarios in a web browser: 1. Tracking a page load 2. Denoting when a page becomes interactive A Span is best used to track the first scenario because it's an operation with a start and an end. A Span Event is best used to track the second scenario because it represents a meaningful, singular point in time.",
+      "citation": {
+        "chunk_id": "fafb77daa4340852ce31fa1a8cc091d034a7f150e68df21b22256d79004c0930",
+        "document_id": "f94e6a8959c528040f1f9b2c2423b2a3bd80625f08fdef3a0d22eb6ff99904f6",
+        "title": "Traces",
+        "heading": "Spans > Span Events",
+        "url": "https://opentelemetry.io/docs/concepts/signals/traces/#span-events",
+        "revision": "c6df13913b1b0133aa46fdf9183c3a3f9ba64092",
+        "source_start_line": 263,
+        "source_end_line": 276,
+        "license": "CC-BY-4.0",
+        "attribution": "OpenTelemetry Authors",
+        "modifications": "Selected sections; code examples/front matter/diagrams omitted, Markdown formatting removed; 100-word chunks with 20-word overlap.",
+        "excerpt_truncated": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"@voiceops/worker","version":"0.1.0","private":true,"type":"module","dependencies":{"bullmq":"6.3.12","pg":"8.23.1"}}

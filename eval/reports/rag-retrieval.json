@@ -1,0 +1,653 @@
+{
+  "capturedAt": "2026-10-09T20:42:19.581Z",
+  "corpus_documents": 4,
+  "chunks": 55,
+  "model_key": "Xenova/all-MiniLM-L6-v2@751bff37182d3f1213fa05d7196b954e230abad9:q8:mean:normalized:384:transformers4.3.1:max256",
+  "similarity_threshold": 0.4,
+  "question_set": "27 hand-curated development questions; 20 supported and the remainder unsupported; not a held-out diagnosis benchmark",
+  "citation_check": "Exact excerpt, heading, document ID, pinned revision and section URL against checksum-verified source chunks; live page anchors checked separately",
+  "reports": [
+    {
+      "mode": "vector",
+      "recall_at_5": 0.95,
+      "positive_questions": 20,
+      "recalled": 19,
+      "unsupported_questions": 7,
+      "unsupported_abstentions": 6,
+      "citation_correctness": 1,
+      "citations_checked": 99,
+      "cases": [
+        {
+          "id": "q01",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods"
+          ],
+          "duration_ms": 758
+        },
+        {
+          "id": "q02",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods"
+          ],
+          "duration_ms": 42
+        },
+        {
+          "id": "q03",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#examine-pod-logs",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods"
+          ],
+          "duration_ms": 41
+        },
+        {
+          "id": "q04",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#examine-pod-logs"
+          ],
+          "duration_ms": 41
+        },
+        {
+          "id": "q05",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 41
+        },
+        {
+          "id": "q06",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 36
+        },
+        {
+          "id": "q07",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q08",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q09",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory"
+          ],
+          "duration_ms": 31
+        },
+        {
+          "id": "q10",
+          "recalled": false,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-any-service-exist-in-dns",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-ip"
+          ],
+          "duration_ms": 32
+        },
+        {
+          "id": "q11",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-ip",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-any-service-exist-in-dns",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name"
+          ],
+          "duration_ms": 29
+        },
+        {
+          "id": "q12",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist"
+          ],
+          "duration_ms": 30
+        },
+        {
+          "id": "q13",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working"
+          ],
+          "duration_ms": 33
+        },
+        {
+          "id": "q14",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-have-any-endpointslices",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-have-any-endpointslices",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist"
+          ],
+          "duration_ms": 30
+        },
+        {
+          "id": "q15",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods"
+          ],
+          "duration_ms": 29
+        },
+        {
+          "id": "q16",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#context-propagation",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-context",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links"
+          ],
+          "duration_ms": 28
+        },
+        {
+          "id": "q17",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-context",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-events"
+          ],
+          "duration_ms": 29
+        },
+        {
+          "id": "q18",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-events",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status"
+          ],
+          "duration_ms": 30
+        },
+        {
+          "id": "q19",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#client",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#server"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q20",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind"
+          ],
+          "duration_ms": 33
+        },
+        {
+          "id": "q21",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 31
+        },
+        {
+          "id": "q22",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 27
+        },
+        {
+          "id": "q23",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 31
+        },
+        {
+          "id": "q24",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 34
+        },
+        {
+          "id": "q25",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 34
+        },
+        {
+          "id": "q26",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 32
+        },
+        {
+          "id": "q27",
+          "recalled": null,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu"
+          ],
+          "duration_ms": 29
+        }
+      ]
+    },
+    {
+      "mode": "hybrid",
+      "recall_at_5": 0.95,
+      "positive_questions": 20,
+      "recalled": 19,
+      "unsupported_questions": 7,
+      "unsupported_abstentions": 6,
+      "citation_correctness": 1,
+      "citations_checked": 99,
+      "cases": [
+        {
+          "id": "q01",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods"
+          ],
+          "duration_ms": 36
+        },
+        {
+          "id": "q02",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods"
+          ],
+          "duration_ms": 35
+        },
+        {
+          "id": "q03",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#examine-pod-logs",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods"
+          ],
+          "duration_ms": 32
+        },
+        {
+          "id": "q04",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#examine-pod-logs"
+          ],
+          "duration_ms": 31
+        },
+        {
+          "id": "q05",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 33
+        },
+        {
+          "id": "q06",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q07",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#example-debugging-pending-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu"
+          ],
+          "duration_ms": 43
+        },
+        {
+          "id": "q08",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/"
+          ],
+          "duration_ms": 33
+        },
+        {
+          "id": "q09",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/#using-kubectl-describe-pod-to-fetch-details-about-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory",
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory"
+          ],
+          "duration_ms": 31
+        },
+        {
+          "id": "q10",
+          "recalled": false,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-any-service-exist-in-dns",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-ip"
+          ],
+          "duration_ms": 35
+        },
+        {
+          "id": "q11",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-ip",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-any-service-exist-in-dns",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-work-by-dns-name"
+          ],
+          "duration_ms": 36
+        },
+        {
+          "id": "q12",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist"
+          ],
+          "duration_ms": 30
+        },
+        {
+          "id": "q13",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working"
+          ],
+          "duration_ms": 32
+        },
+        {
+          "id": "q14",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-have-any-endpointslices",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-have-any-endpointslices",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q15",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#does-the-service-exist",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#are-the-pods-working",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#is-the-service-defined-correctly",
+            "https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/#any-network-policy-ingress-rules-affecting-the-target-pods"
+          ],
+          "duration_ms": 32
+        },
+        {
+          "id": "q16",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#context-propagation",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-context",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links"
+          ],
+          "duration_ms": 30
+        },
+        {
+          "id": "q17",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-context",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-events"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q18",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#when-to-use-span-events-versus-span-attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-events",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#attributes",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status"
+          ],
+          "duration_ms": 34
+        },
+        {
+          "id": "q19",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-links",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#client",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#server"
+          ],
+          "duration_ms": 47
+        },
+        {
+          "id": "q20",
+          "recalled": true,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-status",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#spans",
+            "https://opentelemetry.io/docs/concepts/signals/traces/#span-kind"
+          ],
+          "duration_ms": 47
+        },
+        {
+          "id": "q21",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 31
+        },
+        {
+          "id": "q22",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 35
+        },
+        {
+          "id": "q23",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 36
+        },
+        {
+          "id": "q24",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 44
+        },
+        {
+          "id": "q25",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 46
+        },
+        {
+          "id": "q26",
+          "recalled": null,
+          "status": "insufficient_knowledge_coverage",
+          "returned_citations": [],
+          "duration_ms": 61
+        },
+        {
+          "id": "q27",
+          "recalled": null,
+          "status": "retrieval_candidates",
+          "returned_citations": [
+            "https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#cpu"
+          ],
+          "duration_ms": 76
+        }
+      ]
+    }
+  ]
+}
